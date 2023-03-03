@@ -34,7 +34,6 @@
 .author{
   text-align: right;
   margin: 15px 0;
-  height: auto;
 }
 
 h3{
@@ -47,25 +46,23 @@ margin-right: 10px;
    border: none;
 }
 
-.button{
-  border: none;
+.button{  
+  font-size: 40px;
   color: white;
-  margin-right: 10px;
-  border-radius: 30px;
+  border: none;
+  border-radius: 50px;
   width: 50px;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
-  opacity: 0.5;
-  transition: 0.3s;
+  align-items: center;
+  margin: 0 10px 0 auto;
   cursor: pointer;
-  margin: auto 0;
-  font-size: 25px;
-  padding: 30px;
+  transition: transform 200ms ease;
 }
 
 .button:hover{
-opacity: 1;
+transform: scale(1.04);
 }
 
 .quote{
