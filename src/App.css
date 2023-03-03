@@ -41,9 +41,10 @@ margin-right: 10px;
 }
 
 .containerButton{
-  display: flex;
-  justify-content: flex-end;
-   border: none;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-size: 48px;
 }
 
 .button{  
