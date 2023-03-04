@@ -1,13 +1,10 @@
 import React from 'react'
 
-const QuoteButton = ({newQuote,color}) => {
-  console.log(color);
+const QuoteButton = ({newQuote, color}) => {
   return (
-    <div className='containerButton' >
-        <button onClick={newQuote} className="button" style={{backgroundColor:color, borderColor:color}}>
-        <i className='bx bxs-chevron-right'></i>
-        </button>
-    </div>
+    <button className='quoteBox__button' onClick={newQuote} style={{backgroundColor: color}}>
+      <i className='bx bx-chevron-right'></i>
+    </button>
   )
 }
 
