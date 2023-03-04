@@ -1,41 +1,38 @@
-
+import { useState } from 'react';
 import './App.css'
+import QuoteBox from './components/QuoteBox';
 import db from "./db/quotes.json"
-import QuoteBox from "./components/QuoteBox"
-import { useState } from 'react'
 
-const getRandom = (arrayElements)=>{
+
+const arrayColors = ["#ff5f7c", "#ffb8ec", "#ffbf75", "#c8ad8d", "#ff8862", "#3f8880", "#FFE4C4", "#00c6ab", "#ff81ff", "#7052ff", "#ebb7ce", "#20c67a" ]
+
+
+const getRandom = (arrayElements) => {
   const quantityValues = arrayElements.length
-  const randomIndex = Math.floor(Math.random() * quantityValues);
+  const randomIndex = Math.floor(Math.random() * quantityValues)
+  return arrayElements[randomIndex];
+};
 
-  return arrayElements[randomIndex]
-  }
 
-  let colors = ["#0048BA","#B0BF1A","#7CB9E8","#3CD070","#B284BE","#5D8AA8",
-  "#00308F",  "#72A0C1","#AF002A","#FFF700","#FFAE42","#84DE02"]
- 
 function App() {
   
-  const [quote,setQuote] = useState(getRandom(db));
-  const [color,setColor] = useState(getRandom(colors));
 
- 
+  const [quote, setQuote] = useState(getRandom(db));
 
-const newQuote = () =>{
-setQuote(getRandom(db))
-setColor(getRandom(colors))
-}
+  const [color, setColor] = useState(getRandom(arrayColors))
 
-
-
-
- 
-
-console.log(getRandom(db));
+  const newQuote = () => {
+    setQuote(getRandom(db))
+    setColor(getRandom(arrayColors))
+  };
+  
   return (
-    <div className="App" style={{backgroundColor:color}}>
-  <QuoteBox quote={quote} color={color} newQuote={newQuote} />
-
+    <div className="App" style ={{backgroundColor: color }}>
+      <QuoteBox 
+      quote={quote} 
+      newQuote={newQuote} 
+      color={color}
+      />
     </div>
   )
 }
