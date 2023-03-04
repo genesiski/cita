@@ -1,49 +1,35 @@
-#root {
-  margin: 0 auto;
-  padding: 0;
-}
-
-.App{
+.App {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  font-size: 20px;
-  font-family: cursive;
+  justify-content: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 26px;
   padding: 10px;
-   }
-   
-.Container{
-  position: relative;
+}
+
+.quoteBox {
+  background-color: white;
   padding: 15px;
   border-radius: 10px;
-  max-width: 800px;
-  box-shadow: 1px 1px 18px rgb(132, 132, 132);
-  background-color: white;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 1px 1px 18px rgb(112, 106, 106);
 }
 
-.Datingcontainer{
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.author{
+.quoteBox__author {
   text-align: right;
   margin: 15px 0;
 }
 
-.containerButton{
+.quoteBox__icon {
   position: absolute;
   bottom: 12px;
-  left: 20px;
+  left: 12px;
   font-size: 48px;
 }
 
-.button{  
+.quoteBox__button {
   font-size: 40px;
   color: white;
   border: none;
@@ -58,10 +44,6 @@
   transition: transform 200ms ease;
 }
 
-.button:hover{
-transform: scale(1.04);
-}
-
-.quote{
-  font-size: 50px;
+.quoteBox__button:hover {
+  transform: scale(1.04);
 }
